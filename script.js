@@ -1,19 +1,19 @@
 const seal = document.getElementById("seal");
-const openBtn = document.getElementById("openBtn");
+
 const flap = document.getElementById("flap");
-const openBtn2 = document.querySelector(".open-btn2");
+
 const detailsPage = document.getElementById("detailsPage");
 const flowers = document.querySelectorAll(".flower-top-left, .flower-bottom-right");
 
 
 seal.addEventListener("click", openInvitation);
-openBtn.addEventListener("click", openInvitation);
+
 
 
 function openInvitation(){
 
     seal.classList.add("seal-hide");
-    openBtn2.classList.add("hide-btn");
+    
 
     setTimeout(() => {
 
