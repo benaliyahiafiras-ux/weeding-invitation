@@ -1,0 +1,623 @@
+/* =========================
+   الإعدادات العامة
+========================= */
+
+
+.mobile-container{
+
+    width:100%;
+
+    max-width:430px;
+
+    min-height:100vh;
+
+    margin:auto;
+
+    position: relative ;
+
+    overflow-x:hidden;
+
+    overflow-y:auto ;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    direction:rtl;
+
+    font-family: "Tahoma", sans-serif;
+
+    background-image:url("images/marble.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+      الصفحة الأولى
+========================= */
+
+.hero{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+/* محتوى الصفحة */
+
+.hero-content{
+
+    width:90%;
+
+    max-width:850px;
+
+    background:transparent;
+
+    backdrop-filter:blur(5px);
+
+    border-radius:0;
+
+    padding:70px;
+
+    text-align:center;
+
+    box-shadow:none;
+
+}
+
+
+/* البسملة */
+
+.bismillah{
+
+    color:#7b2034;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* الآية */
+
+.ayah{
+
+    color:#666;
+
+    font-size:19px;
+
+    line-height:2.2;
+
+    margin-bottom:15px;
+
+}
+
+
+/* السورة */
+
+.surah{
+
+    color:#a38b64;
+
+    margin-bottom:50px;
+
+}
+
+
+/* عنوان الدعوة */
+
+.title{
+
+    color:#7b2034;
+
+    font-size:60px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* أسماء العروسين */
+
+.names{
+
+    font-size:46px;
+
+    margin-bottom:25px;
+
+}
+
+.groom{
+
+    color:#7b2034;
+
+}
+
+.heart{
+
+    color:#b99249;
+
+    margin:0 15px;
+
+}
+
+.bride{
+
+    color:#7b2034;
+
+}
+
+
+/* النص */
+
+.invite-text{
+
+    color:#555;
+
+    font-size:22px;
+
+    margin-bottom:40px;
+
+}
+
+
+/* الزر */
+
+.open-btn{
+
+    background:#7b2034;
+
+    color:white;
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:18px 45px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.open-btn:hover{
+
+    transform:scale(1.05);
+
+}
+.flower-top-left{
+
+    position:absolute;
+
+    top:0px;
+
+    left:-50px;
+
+    width:300px;
+
+    pointer-events:none;
+
+}
+
+.flower-bottom-right{
+
+    position:absolute;
+
+    bottom:200px;
+
+    right: -200px;
+
+    width:400px;
+
+    pointer-events:none;
+
+}
+/*==========================
+        الظرف
+==========================*/
+
+.envelope-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:0;
+
+    margin-bottom:120px;
+    transform: translateY(-300px);
+
+}
+
+.envelope-container{
+
+    position:relative;
+
+    width:700px;
+
+    max-width:90%;
+
+}
+
+.envelope{
+
+    position:relative;
+
+    width:100%;
+    
+    perspective:800px;
+
+     overflow:visible;
+
+}
+
+.envelope-base{
+
+    width:100%; 
+
+    display:block;
+    transform: translate(50px,100px);
+
+}
+
+.envelope-flap{
+
+    position:absolute;
+
+    top:150px;
+
+    left:70px;
+
+    width:80%;
+
+    transform-origin:top center;
+
+    transition:1s ease;
+    z-index:5;
+
+}
+
+.seal-img{
+
+    position:absolute;
+
+    width:200px;
+
+    left:55%;
+
+    top:82%;
+
+    transform:translate(-50%,-50%);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.seal-img:hover{
+
+    transform:translate(-50%,-50%) scale(1.08);
+
+}
+
+.open-btn2{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:235px;
+
+    transform:translateX(-50%);
+
+    background:#7b2034;
+
+    color:white;
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:7px 20px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+/*==========================
+      إخفاء الختم
+==========================*/
+
+.seal-hide{
+
+    opacity:0;
+
+    transform:translate(-50%,-50%) scale(0);
+
+    transition:0.6s ease;
+
+}
+.flap-open{
+
+    transform:translateY(-120px) scale(0.95);
+
+    opacity:0;
+
+    transition:1s ease;
+
+
+}
+/* بطاقة الدعوة */
+
+
+
+.hide-btn{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    pointer-events:none;
+
+    transition:.6s ease;
+
+}
+
+
+
+
+
+.details-page{
+
+    position:fixed;
+
+    top:0;
+    left:50%;
+
+    width:100%;
+    max-width:430px;
+
+    height:100vh;
+
+    transform:translate(-50%,100%);
+
+    background:white;
+
+    z-index:100;
+
+    transition:transform 1s ease;
+
+    padding:40px;
+
+    overflow-y:auto;
+
+    text-align:center;
+
+}
+
+.details-show{
+
+    transform:translate(-50%,0);
+
+}
+
+
+
+
+.details-header{
+
+    text-align:center;
+
+    margin-top:40px;
+
+}
+
+
+.details-header h1{
+
+    color:#7b2034;
+
+    font-size:38px;
+
+}
+
+
+.details-header span{
+
+    color:#b99249;
+
+    margin:0 10px;
+
+}
+
+
+.details-header p{
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-top:20px;
+
+}
+
+
+
+
+.countdown-section{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+
+.countdown-section h2{
+
+    color:#7b2034;
+
+    margin-bottom:25px;
+
+}
+
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    direction:ltr;
+
+}
+
+
+.time-box{
+
+    background:#7b2034;
+
+    color:white;
+
+    width:70px;
+
+    height:80px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.time-box span{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+
+.time-box small{
+
+    font-size:14px;
+
+}
+
+
+.event-info{
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+
+.event-info h2{
+
+    color:#7b2034;
+
+    margin-bottom:25px;
+
+}
+
+
+.info-box{
+
+    background:#fafafa;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+}
+
+
+.info-box p{
+
+    font-size:18px;
+
+    color:#555;
+
+    margin:15px 0;
+
+}
+
+
+
+.map-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#7b2034;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+.map-btn:hover{
+
+    transform:scale(1.05);
+
+}
