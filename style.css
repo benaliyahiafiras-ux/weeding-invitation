@@ -237,7 +237,7 @@ body{
 
     bottom:200px;
 
-    right: -200px;
+    right: -170px;
 
     width:400px;
 
@@ -287,10 +287,10 @@ body{
 
 .envelope-base{
 
-    width:100%; 
+    width:120%; 
 
     display:block;
-    transform: translate(50px,100px);
+    transform: translate(30px,100px);
 
 }
 
@@ -298,11 +298,11 @@ body{
 
     position:absolute;
 
-    top:150px;
+    top:157px;
 
-    left:70px;
+    left:-20px;
 
-    width:80%;
+    width:95%;
 
     transform-origin:top center;
 
@@ -317,9 +317,9 @@ body{
 
     width:200px;
 
-    left:55%;
+    left:40%;
 
-    top:82%;
+    top:78%;
 
     transform:translate(-50%,-50%);
 
@@ -341,7 +341,7 @@ body{
 
     left:50%;
 
-    bottom:235px;
+    bottom:300px;
 
     transform:translateX(-50%);
 
