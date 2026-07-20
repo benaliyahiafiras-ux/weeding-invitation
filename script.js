@@ -3,6 +3,7 @@ const seal = document.getElementById("seal");
 const flap = document.getElementById("flap");
 
 const detailsPage = document.getElementById("detailsPage");
+
 const flowers = document.querySelectorAll(".flower-top-left, .flower-bottom-right");
 
 
@@ -24,8 +25,8 @@ function openInvitation(){
 
     setTimeout(()=>{
 
-    detailsPage.classList.add("details-show");
-
+    //detailsPage.classList.add("details-show");
+document.querySelector(".envelope-section").style.display = "none";
     flowers.forEach(flower=>{
         flower.style.opacity="0";
     });
