@@ -1,25 +1,6 @@
-/* =========================
-   الإعدادات العامة
-========================= */
-
-
-.mobile-container{
-
-    width:100%;
-
-    max-width:430px;
-
-    min-height:100vh;
-
-    margin:auto;
-
-    position: relative ;
-
-    overflow-x:hidden;
-
-    overflow-y:auto ;
-
-}
+/*=========================================
+            الإعدادات العامة
+=========================================*/
 
 *{
     margin:0;
@@ -30,66 +11,204 @@
 body{
 
     direction:rtl;
-
-    font-family: "Tahoma", sans-serif;
+    font-family:"Tahoma",sans-serif;
 
     background-image:url("images/marble.jpg");
-
     background-size:cover;
-
     background-position:center;
-
     background-repeat:no-repeat;
-
     background-attachment:fixed;
 
     min-height:100vh;
+    overflow-x:hidden;
+
+}
+
+.mobile-container{
+
+    width:100%;
+    max-width:430px;
+    min-height:100vh;
+
+    margin:auto;
+    position:relative;
 
     overflow-x:hidden;
 
 }
 
 
-/* =========================
-      الصفحة الأولى
-========================= */
+/*=========================================
+                صفحة الظرف
+=========================================*/
 
-.hero{
+.envelope-section{
+
+    position:fixed;
+
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
 
     width:100%;
-
-    min-height:100vh;
+    max-width:430px;
+    height:100vh;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
+    background-image:url("images/marble.jpg");
+    background-size:cover;
+    background-position:center;
+
+    z-index:9999;
+
+}
+
+.envelope-container{
+
     position:relative;
+
+    width:700px;
+    max-width:90%;
+
+}
+
+.envelope{
+
+    position:relative;
+    width:100%;
+
+    perspective:800px;
+
+}
+
+.envelope-base{
+
+    width:120%;
+    display:block;
+
+    transform:translate(30px,100px);
+
+}
+
+.envelope-flap{
+
+    position:absolute;
+
+    top:157px;
+    left:-20px;
+
+    width:95%;
+
+    transform-origin:top center;
+
+    transition:1s ease;
+
+    z-index:5;
+
+}
+
+.seal-img{
+
+    position:absolute;
+
+    width:200px;
+
+    left:40%;
+    top:78%;
+
+    transform:translate(-50%,-50%);
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.seal-img:hover{
+
+    transform:translate(-50%,-50%) scale(1.08);
 
 }
 
 
-/* محتوى الصفحة */
+/*=========================================
+                الحركات
+=========================================*/
+
+.seal-hide{
+
+    opacity:0;
+
+    transform:translate(-50%,-50%) scale(0);
+
+    transition:.6s ease;
+
+}
+
+.flap-open{
+
+    transform:translateY(-120px) scale(.95);
+
+    opacity:0;
+
+    transition:1s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/*=========================================
+                صفحة الدعوة
+=========================================*/
+
+.hero{
+
+    display:none;
+
+    width:100%;
+    min-height:100vh;
+
+    
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    animation:fadeIn 1s ease;
+
+}
 
 .hero-content{
 
     width:90%;
-
     max-width:850px;
 
-    background:transparent;
-
-    backdrop-filter:blur(5px);
-
-    border-radius:0;
-
-    padding:70px;
+    padding:60px 25px;
 
     text-align:center;
 
-    box-shadow:none;
+    background: transparent;
 
 }
 
@@ -128,51 +247,20 @@ body{
 
     color:#a38b64;
 
-    margin-bottom:50px;
+    margin-bottom:45px;
 
 }
 
 
-/* عنوان الدعوة */
+/* العنوان */
 
 .title{
 
     color:#7b2034;
 
-    font-size:60px;
-
-    margin-bottom:30px;
-
-}
-
-
-/* أسماء العروسين */
-
-.names{
-
-    font-size:20px;
+    font-size:48px;
 
     margin-bottom:25px;
-
-}
-
-.groom{
-
-    color:#7b2034;
-
-}
-
-.heart{
-
-    color:#b99249;
-
-    margin:0 15px;
-
-}
-
-.bride{
-
-    color:#7b2034;
 
 }
 
@@ -185,267 +273,14 @@ body{
 
     font-size:22px;
 
+    line-height:1.8;
+
     margin-bottom:40px;
 
 }
 
 
-/* الزر */
-
-.open-btn{
-
-    background:#7b2034;
-
-    color:white;
-
-    border:none;
-
-    border-radius:40px;
-
-    padding:18px 45px;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.open-btn:hover{
-
-    transform:scale(1.05);
-
-}
-.flower-top-left{
-
-    position:absolute;
-
-    top:0px;
-
-    left:-50px;
-
-    width:300px;
-
-    pointer-events:none;
-
-}
-
-.flower-bottom-right{
-
-    position:absolute;
-
-    bottom:200px;
-
-    right: -170px;
-
-    width:400px;
-
-    pointer-events:none;
-
-}
-/*===============       الظرف
-===*/
-
-.envelope-section{
-    position:fixed;
-    top:0;
-    left:50%;
-    transform:translateX(-50%);
-
-    width:100%;
-    max-width:430px;
-    height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background-image:url("images/marble.jpg");
-    background-size:cover;
-    background-position:center;
-
-    z-index:9999;
-
-    
-}
-
-.envelope-container{
-
-    position:relative;
-
-    width:700px;
-
-    max-width:90%;
-
-}
-
-.envelope{
-
-    position:relative;
-
-    width:100%;
-    
-    perspective:800px;
-
-     overflow:visible;
-
-}
-
-.envelope-base{
-
-    width:120%; 
-
-    display:block;
-    transform: translate(30px,100px);
-
-}
-
-.envelope-flap{
-
-    position:absolute;
-
-    top:157px;
-
-    left:-20px;
-
-    width:95%;
-
-    transform-origin:top center;
-
-    transition:1s ease;
-    z-index:5;
-
-}
-
-.seal-img{
-
-    position:absolute;
-
-    width:200px;
-
-    left:40%;
-
-    top:78%;
-
-    transform:translate(-50%,-50%);
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-.seal-img:hover{
-
-    transform:translate(-50%,-50%) scale(1.08);
-
-}
-
-.open-btn2{
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:300px;
-
-    transform:translateX(-50%);
-
-    background:#7b2034;
-
-    color:white;
-
-    border:none;
-
-    border-radius:40px;
-
-    padding:7px 20px;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-}
-/*==========================
-      إخفاء الختم
-==========================*/
-
-.seal-hide{
-
-    opacity:0;
-
-    transform:translate(-50%,-50%) scale(0);
-
-    transition:0.6s ease;
-
-}
-.flap-open{
-
-    transform:translateY(-120px) scale(0.95);
-
-    opacity:0;
-
-    transition:1s ease;
-
-
-}
-/* بطاقة الدعوة */
-
-
-
-.hide-btn{
-
-    opacity:0;
-
-    transform:translateY(20px);
-
-    pointer-events:none;
-
-    transition:.6s ease;
-
-}
-
-
-
-
-
-.details-page{
-
-    position:fixed;
-
-    top:0;
-    left:50%;
-
-    width:100%;
-    max-width:430px;
-
-    height:100vh;
-
-    transform:translate(-50%,100%);
-
-    background:rgb(105, 12, 38);
-
-    z-index:100;
-
-    transition:transform 1s ease;
-
-    padding:40px;
-
-    overflow-y:auto;
-
-    text-align:center;
-
-}
-
-.details-show{
-
-    transform:translate(-50%,0);
-
-}
-
-
-
+/* أسماء العروسين */
 
 .details-header{
 
@@ -455,24 +290,21 @@ body{
 
 }
 
-
 .details-header h1{
 
     color:#7b2034;
 
-    font-size:38px;
+    font-size:42px;
 
 }
-
 
 .details-header span{
 
     color:#b99249;
 
-    margin:0 10px;
+    margin:0 12px;
 
 }
-
 
 .details-header p{
 
@@ -485,25 +317,112 @@ body{
 }
 
 
+/* الزهور */
 
+.flower-top-left{
 
-.countdown-section{
+    position:absolute;
 
-    text-align:center;
+    top:0;
 
-    margin-top:50px;
+    left:-50px;
+
+    width:300px;
+
+    pointer-events:none;
+
+    transition:opacity .8s;
+
+}
+
+.flower-bottom-right{
+
+    position:absolute;
+
+    right:-170px;
+
+    bottom:120px;
+
+    width:400px;
+
+    pointer-events:none;
+
+    transition:opacity .8s;
 
 }
 
 
-.countdown-section h2{
+
+
+/*=========================================
+            تفاصيل الحفل
+=========================================*/
+
+.event-info{
+
+    width:90%;
+    margin:60px auto;
+
+    text-align:center;
+
+}
+
+.event-info h2{
 
     color:#7b2034;
+
+    font-size:30px;
 
     margin-bottom:25px;
 
 }
 
+.info-box{
+
+    background:#fafafa;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+
+}
+
+.info-box p{
+
+    color:#555;
+
+    font-size:20px;
+
+    margin:18px 0;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================================
+            العد التنازلي
+=========================================*/
+
+.countdown-section{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+.countdown-section h2{
+
+    color:#7b2034;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
 
 .countdown{
 
@@ -515,18 +434,18 @@ body{
 
     direction:ltr;
 
+    flex-wrap:wrap;
+
 }
 
-
 .time-box{
+
+    width:75px;
+    height:85px;
 
     background:#7b2034;
 
     color:white;
-
-    width:70px;
-
-    height:80px;
 
     border-radius:15px;
 
@@ -540,15 +459,13 @@ body{
 
 }
 
-
 .time-box span{
 
-    font-size:28px;
+    font-size:30px;
 
     font-weight:bold;
 
 }
-
 
 .time-box small{
 
@@ -557,54 +474,17 @@ body{
 }
 
 
-.event-info{
-
-    text-align:center;
-
-    margin-top:50px;
-
-}
-
-
-.event-info h2{
-
-    color:#7b2034;
-
-    margin-bottom:25px;
-
-}
-
-
-.info-box{
-
-    background:#fafafa;
-
-    border-radius:20px;
-
-    padding:25px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
-
-}
-
-
-.info-box p{
-
-    font-size:18px;
-
-    color:#555;
-
-    margin:15px 0;
-
-}
-
-
+/*=========================================
+            زر الخريطة
+=========================================*/
 
 .map-btn{
 
     display:inline-block;
 
-    margin-top:25px;
+    margin-top:35px;
+
+    padding:15px 30px;
 
     background:#7b2034;
 
@@ -612,9 +492,7 @@ body{
 
     text-decoration:none;
 
-    padding:15px 30px;
-
-    border-radius:30px;
+    border-radius:35px;
 
     font-size:18px;
 
@@ -622,9 +500,71 @@ body{
 
 }
 
-
 .map-btn:hover{
 
     transform:scale(1.05);
+
+}
+
+
+/*=========================================
+            الهواتف الصغيرة
+=========================================*/
+
+@media (max-width:430px){
+
+    .title{
+
+        font-size:40px;
+
+    }
+
+    .ayah{
+
+        font-size:17px;
+
+    }
+
+    .details-header h1{
+
+        font-size:34px;
+
+    }
+
+    .invite-text{
+
+        font-size:20px;
+
+    }
+
+    .flower-top-left{
+
+        width:220px;
+
+        left:-60px;
+
+    }
+
+    .flower-bottom-right{
+
+        width:300px;
+
+        right:-120px;
+
+    }
+
+    .time-box{
+
+        width:65px;
+
+        height:75px;
+
+    }
+
+    .time-box span{
+
+        font-size:24px;
+
+    }
 
 }

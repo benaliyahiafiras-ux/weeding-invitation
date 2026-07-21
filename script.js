@@ -1,79 +1,64 @@
 const seal = document.getElementById("seal");
-
 const flap = document.getElementById("flap");
-
-//const detailsPage = document.getElementById("detailsPage");
-
+const envelope = document.querySelector(".envelope-section");
+const hero = document.querySelector(".hero");
 const flowers = document.querySelectorAll(".flower-top-left, .flower-bottom-right");
-
 
 seal.addEventListener("click", openInvitation);
 
-
-
-function openInvitation(){
+function openInvitation() {
 
     seal.classList.add("seal-hide");
-    
 
     setTimeout(() => {
 
         flap.classList.add("flap-open");
 
-    },600);
+    }, 600);
 
+    setTimeout(() => {
 
-    setTimeout(()=>{
+        envelope.style.display = "none";
 
-    //detailsPage.classList.add("details-show");
-document.querySelector(".envelope-section").remove();
+        hero.style.display = "flex";
+        hero.style.animation = "fadeIn 1s ease";
 
-    flowers.forEach(flower => {
-        flower.style.opacity = "1";
-    });
+        flowers.forEach(flower => {
+            flower.style.opacity = "1";
+        });
 
-  },1500);
-
+    }, 1500);
 
 }
 
+
 const weddingDate = new Date("August 18, 2026 16:00:00").getTime();
 
-
-setInterval(()=>{
+setInterval(() => {
 
     const now = new Date().getTime();
-
     const distance = weddingDate - now;
-
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
     const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        /
+        (distance % (1000 * 60 * 60 * 24)) /
         (1000 * 60 * 60)
     );
 
-
     const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        /
+        (distance % (1000 * 60 * 60)) /
         (1000 * 60)
     );
 
-
     const seconds = Math.floor(
-        (distance % (1000 * 60))
-        /
+        (distance % (1000 * 60)) /
         1000
     );
 
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-
-
-},1000);
+}, 1000);
