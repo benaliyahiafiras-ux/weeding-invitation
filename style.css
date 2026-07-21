@@ -248,19 +248,26 @@ body{
 ===*/
 
 .envelope-section{
+    position:fixed;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:100%;
+    max-width:430px;
+    height:100vh;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    margin-top:0;
+    background-image:url("images/marble.jpg");
+    background-size:cover;
+    background-position:center;
 
-    margin-bottom:120px;
-   /* transform: translateY(-300px);*/
-   z-index:999;
+    z-index:9999;
 
+    
 }
 
 .envelope-container{
