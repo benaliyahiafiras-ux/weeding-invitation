@@ -72,7 +72,7 @@ body{
 
     position:relative;
 
-    width:92%;
+    width:100%;
 
     display:flex;
 
@@ -91,9 +91,9 @@ body{
 
     width:100%;
 
-    max-height:92vh;
+    height:100%;
 
-    object-fit:contain;
+    object-fit:cover;
 
     display:block;
 
@@ -108,11 +108,11 @@ body{
 
     position:absolute;
 
-    width:200px;
+    width:350px;
 
     left:50%;
 
-    top:52%;
+    top:54%;
 
     transform:translate(-50%,-50%);
 
