@@ -62,6 +62,8 @@ body{
     background-size:cover;
     background-position:center;
 
+    overflow:hidden;
+
     z-index:9999;
 
 }
@@ -70,45 +72,37 @@ body{
 
     position:relative;
 
-    width:700px;
-    max-width:90%;
+    width:92%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
-.envelope{
 
-    position:relative;
+
+
+
+
+.envelope-image{
+
     width:100%;
 
-    perspective:800px;
+    max-height:92vh;
 
-}
+    object-fit:contain;
 
-.envelope-base{
-
-    width:120%;
     display:block;
 
-    transform:translate(30px,100px);
-
 }
 
-.envelope-flap{
 
-    position:absolute;
 
-    top:157px;
-    left:-20px;
 
-    width:95%;
 
-    transform-origin:top center;
-
-    transition:1s ease;
-
-    z-index:5;
-
-}
 
 .seal-img{
 
@@ -116,14 +110,17 @@ body{
 
     width:200px;
 
-    left:40%;
-    top:78%;
+    left:50%;
+
+    top:52%;
 
     transform:translate(-50%,-50%);
 
     cursor:pointer;
 
-    transition:.4s;
+    transition:.35s;
+
+    z-index:10;
 
 }
 
@@ -148,15 +145,7 @@ body{
 
 }
 
-.flap-open{
 
-    transform:translateY(-120px) scale(.95);
-
-    opacity:0;
-
-    transition:1s ease;
-
-}
 
 @keyframes fadeIn{
 

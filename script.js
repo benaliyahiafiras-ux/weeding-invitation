@@ -1,5 +1,4 @@
 const seal = document.getElementById("seal");
-const flap = document.getElementById("flap");
 const envelope = document.querySelector(".envelope-section");
 const hero = document.querySelector(".hero");
 const flowers = document.querySelectorAll(".flower-top-left, .flower-bottom-right");
@@ -12,12 +11,6 @@ function openInvitation() {
 
     setTimeout(() => {
 
-        flap.classList.add("flap-open");
-
-    }, 600);
-
-    setTimeout(() => {
-
         envelope.style.display = "none";
 
         hero.style.display = "flex";
@@ -27,10 +20,9 @@ function openInvitation() {
             flower.style.opacity = "1";
         });
 
-    }, 1500);
+    }, 600);
 
 }
-
 
 const weddingDate = new Date("August 18, 2026 16:00:00").getTime();
 
