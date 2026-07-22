@@ -137,11 +137,37 @@ body{
 
 .seal-hide{
 
-    opacity:0;
+    animation:breakSeal .55s forwards;
 
-    transform:translate(-50%,-50%) scale(0);
 
-    transition:.6s ease;
+}
+
+
+
+
+@keyframes breakSeal{
+
+    0%{
+        transform:translate(-50%,-50%) scale(1) rotate(0deg);
+        opacity:1;
+    }
+
+    20%{
+        transform:translate(-50%,-50%) rotate(-8deg);
+    }
+
+    40%{
+        transform:translate(-50%,-50%) rotate(8deg);
+    }
+
+    60%{
+        transform:translate(-50%,-50%) scale(.9) rotate(-5deg);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) scale(.3) rotate(25deg);
+        opacity:0;
+    }
 
 }
 
@@ -184,7 +210,21 @@ body{
 
     position:relative;
 
-    animation:fadeIn 1s ease;
+    opacity: 0;
+    transform:translateY(35px);
+    
+
+}
+
+
+.hero-show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:all 1s ease;
+    
 
 }
 
@@ -368,25 +408,119 @@ body{
 
 .info-box{
 
-    background:#fafafa;
+    background:rgba(255,255,255,0.75);
 
-    border-radius:20px;
+    border:1px solid #b99249;
+
+    border-radius:25px;
 
     padding:25px;
 
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    position:relative;
+
+    overflow:hidden;
+
 
 }
+
+
+
+
+/* الزخرفة العلوية */
+
+.info-box::before{
+
+    content:"✦";
+
+    position:absolute;
+
+    top:-15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#fafafa;
+
+    color:#b99249;
+
+    padding:0 15px;
+
+    font-size:25px;
+
+}
+
+
+/* الخطوط داخل البطاقة */
+
+.info-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:12px;
+
+    left:30px;
+
+    right:30px;
+
+    height:1px;
+
+    background:#b99249;
+
+}
+
+
+
+
+
 
 .info-box p{
 
     color:#555;
 
-    font-size:20px;
+    font-size:21px;
 
-    margin:18px 0;
+    margin:20px 0;
 
     line-height:1.8;
+
+     font-family:"Tahoma";
+
+
+}
+
+
+.info-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+.icon{
+
+    color:#b99249;
+
+    font-size:28px;
+
+}
+
+
+
+.info-item i{
+
+    color:#b99249;
+
+    font-size:25px;
 
 }
 
@@ -429,8 +563,8 @@ body{
 
 .time-box{
 
-    width:75px;
-    height:85px;
+    width:60px;
+    height:65px;
 
     background:#7b2034;
 

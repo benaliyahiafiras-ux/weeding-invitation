@@ -12,9 +12,13 @@ function openInvitation() {
     setTimeout(() => {
 
         envelope.style.display = "none";
-
         hero.style.display = "flex";
-        hero.style.animation = "fadeIn 1s ease";
+
+       
+
+requestAnimationFrame(() => {
+    hero.classList.add("hero-show");
+});
 
         flowers.forEach(flower => {
             flower.style.opacity = "1";
